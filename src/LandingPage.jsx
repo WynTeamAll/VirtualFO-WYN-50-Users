@@ -1,5 +1,6 @@
 // src/LandingPage.jsx
-const FORM_URL = "https://forms.gle/your-form-id-here"; // TODO: replace with your real Google Form link
+const FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?usp=dialog";
 
 export default function LandingPage() {
   return (
@@ -10,6 +11,18 @@ export default function LandingPage() {
         style={{ backgroundColor: "#E9652D" }}
       >
         <div className="max-w-md mx-auto flex flex-col items-center gap-8">
+          {/* Logo */}
+          <div className="flex items-center justify-center px-5 pt-2 pb-2">
+            <img
+              src="https://tknzgegeniiojzsascfl.supabase.co/storage/v1/object/public/pictures/Icon2.png"
+              alt="Start logo"
+              className="h-[60px] w-auto object-contain drop-shadow-sm select-none"
+              loading="eager"
+              decoding="async"
+              draggable="false"
+            />
+          </div>
+
           {/* Penguin Mascot */}
           <div className="w-full max-w-[335px]">
             <img
@@ -44,7 +57,7 @@ export default function LandingPage() {
 
             {/* TOP CTA BUTTON → Google Form  */}
             <a
-              href={"https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?usp=dialog"}
+              href={FORM_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center bg-white text-black rounded-full px-6 py-2.5 text-sm font-medium shadow-sm hover:bg-neutral-100 transition"
@@ -128,16 +141,16 @@ export default function LandingPage() {
         style={{ backgroundColor: "#E9652D" }}
       >
         <div className="max-w-md mx-auto">
-          <h2 className="text-white text-center text-2xl md:text-3xl font-semibold leading-snug mb-10">
+          <h1 className="text-white text-center text-2xl md:text-3xl font-semibold leading-snug mb-10">
             How it works
-          </h2>
+          </h1>
 
           <div className="flex flex-col gap-10">
             {/* Step 1 */}
             <div className="flex flex-col items-center gap-3">
-              <h3 className="text-white text-sm md:text-base font-semibold text-center">
-                Apply for the Pilot
-              </h3>
+              <h2 className="text-white text-sm md:text-base font-semibold text-center">
+                1.Apply for the Pilot
+              </h2>
               <p className="text-white/95 text-xs md:text-sm font-medium leading-relaxed text-center max-w-[300px]">
                 Fill in the short form. We&apos;re selecting 50 serious
                 entrepreneurs.
@@ -146,9 +159,9 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center gap-3">
-              <h3 className="text-white text-sm md:text-base font-semibold text-center">
-                Receive your exclusive invitation
-              </h3>
+              <h2 className="text-white text-sm md:text-base font-semibold text-center">
+                2.Receive your exclusive invitation
+              </h2>
               <p className="text-white/95 text-xs md:text-sm font-medium leading-relaxed text-center max-w-[300px]">
                 If you&apos;re selected, we&apos;ll send you the app link and add you to
                 the WhatsApp pilot group.
@@ -157,9 +170,9 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center gap-3">
-              <h3 className="text-white text-sm md:text-base font-semibold text-center">
-                Learn in 5 minutes a day
-              </h3>
+              <h2 className="text-white text-sm md:text-base font-semibold text-center">
+                3.Learn in 5 minutes a day
+              </h2>
               <p className="text-white/95 text-xs md:text-sm font-medium leading-relaxed text-center max-w-[300px]">
                 Complete 1 short lesson per day. We&apos;ll send daily reminders
                 and keep you on track.
@@ -168,9 +181,9 @@ export default function LandingPage() {
 
             {/* Step 4 */}
             <div className="flex flex-col items-center gap-3">
-              <h3 className="text-white text-sm md:text-base font-semibold text-center">
-                Finish and win
-              </h3>
+              <h2 className="text-white text-sm md:text-base font-semibold text-center">
+                4.Finish and win
+              </h2>
               <p className="text-white/95 text-xs md:text-sm font-medium leading-relaxed text-center max-w-[300px]">
                 Complete all lessons and stand a chance to win rewards.
               </p>
@@ -208,7 +221,7 @@ export default function LandingPage() {
       <section className="bg-white px-4 pb-16">
         <div className="max-w-md mx-auto flex justify-center">
           <a
-            href={"https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?usp=dialog"}
+            href={FORM_URL}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center bg-[#E9652D] text-white rounded-full px-8 py-3 text-sm font-semibold shadow-md hover:bg-[#cf5624] transition"

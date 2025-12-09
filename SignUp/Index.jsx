@@ -5,6 +5,18 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="px-4 py-12 md:py-16 lg:py-20 bg-brand-orange">
         <div className="max-w-md mx-auto flex flex-col items-center gap-8">
+          {/* Logo */}
+          <div className="flex items-center justify-center px-5 pt-2 pb-2">
+            <img
+              src="https://tknzgegeniiojzsascfl.supabase.co/storage/v1/object/public/pictures/Icon2.png"
+              alt="Start logo"
+              className="h-[60px] w-auto object-contain drop-shadow-sm select-none"
+              loading="eager"
+              decoding="async"
+              draggable="false"
+            />
+          </div>
+
           {/* Penguin Mascot */}
           <div className="w-full max-w-[335px]">
             <img
@@ -119,16 +131,16 @@ export default function LandingPage() {
       {/* How it works Section */}
       <section className="px-4 py-12 md:py-16 bg-brand-orange">
         <div className="max-w-md mx-auto">
-          <h2 className="text-white text-center text-2xl font-semibold leading-normal mb-12">
+          <h1 className="text-white text-center text-2xl font-semibold leading-normal mb-12">
             How it works
-          </h2>
+          </h1>
 
           <div className="flex flex-col gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-white text-center text-[14px] font-semibold leading-normal">
-                Apply for the Pilot
-              </h3>
+              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
+                1.Apply for the Pilot
+              </h2>
               <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
                 Fill in the short form. We&apos;re selecting 50 serious entrepreneurs.
               </p>
@@ -136,9 +148,9 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-white text-center text-[14px] font-semibold leading-normal">
-                Receive your exclusive invitation
-              </h3>
+              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
+                2.Receive your exclusive invitation
+              </h2>
               <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
                 If you&apos;re selected, we&apos;ll send you the app link and add you to
                 the WhatsApp pilot group.
@@ -147,9 +159,9 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-white text-center text-[14px] font-semibold leading-normal">
-                Learn in 5 minutes a day
-              </h3>
+              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
+                3.Learn in 5 minutes a day
+              </h2>
               <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
                 Complete 1 short lesson per day. We&apos;ll send daily reminders and
                 keep you on track.
@@ -158,9 +170,9 @@ export default function LandingPage() {
 
             {/* Step 4 */}
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-white text-center text-[14px] font-semibold leading-normal">
-                Finish and win
-              </h3>
+              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
+                4.Finish and win
+              </h2>
               <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
                 Complete all lessons and stand a chance to win rewards.
               </p>
@@ -181,17 +193,13 @@ export default function LandingPage() {
               This pilot is for you if:
             </p>
             <br />
-            <p className="text-black text-[11px] font-medium leading-normal tracking-[0.11px]">
-              You&apos;re aged 18–45 in South Africa
-              <br />
-              You have a business or want to start one
-              <br />
-              You want to master business finances
-              <br />
-              You can commit to 5 minutes a day in building your future
-              <br />
-              You&apos;re open to giving honest feedback to help us improve the app
-            </p>
+            <ul className="text-black text-[11px] font-medium leading-normal tracking-[0.11px] list-disc pl-4 space-y-1">
+              <li>You&apos;re aged 18–45 in South Africa</li>
+              <li>You have a business or want to start one</li>
+              <li>You want to master business finances</li>
+              <li>You can commit to 5 minutes a day in building your future</li>
+              <li>You&apos;re open to giving honest feedback to help us improve the app</li>
+            </ul>
           </div>
         </div>
       </section>

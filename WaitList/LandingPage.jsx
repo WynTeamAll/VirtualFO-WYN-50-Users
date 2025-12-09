@@ -139,17 +139,14 @@ export default function LandingPage() {
               This pilot is for you if:
             </p>
             <br />
-            <p className="text-white text-[11px] font-medium leading-normal tracking-[0.11px]">
-              You&apos;re aged 18–45 in South Africa
-              <br />
-              You have a business or want to start one
-              <br />
-              You want to master business finances
-              <br />
-              You can commit to 5 minutes a day in building your future
-              <br />
-              You&apos;re open to giving honest feedback to help us improve the app
-            </p>
+            <ul className="text-black text-[11px] font-medium leading-normal tracking-[0.11px] list-disc pl-4 space-y-1">
+              <li>You&apos;re aged 18–45 in South Africa</li>
+              <li>You have a business or want to start one</li>
+              <li>You want to master business finances</li>
+              <li>You can commit to 5 minutes a day in building your future</li>
+              <li>You&apos;re open to giving honest feedback to help us improve the app</li>
+            </ul>
+
           </div>
 
           {/* Bottom CTA */}
