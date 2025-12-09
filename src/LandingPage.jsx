@@ -203,16 +203,17 @@ export default function LandingPage() {
             <p className="text-xs md:text-sm font-medium leading-relaxed tracking-[0.03em]">
               This pilot is for you if:
             </p>
-            <ul className="mt-3 space-y-1 text-xs md:text-sm font-medium leading-relaxed tracking-[0.03em]">
-              <li>You&apos;re aged 18–45 in South Africa</li>
-              <li>You have a business or want to start one</li>
-              <li>You want to master business finances</li>
-              <li>You can commit to 5 minutes a day in building your future</li>
-              <li>
-                You&apos;re open to giving honest feedback to help us improve
-                the app
-              </li>
-            </ul>
+            <ul className="mt-3 space-y-1 text-xs md:text-sm font-medium leading-relaxed tracking-[0.03em] list-disc pl-4">
+  <li>You&apos;re aged 18–45 in South Africa</li>
+  <li>You have a business or want to start one</li>
+  <li>You want to master business finances</li>
+  <li>You can commit to 5 minutes a day in building your future</li>
+  <li>
+    You&apos;re open to giving honest feedback to help us improve
+    the app
+  </li>
+</ul>
+
           </div>
         </div>
       </section>
