@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://gwint25-sign-up.netlify.app/sitemap.xml
