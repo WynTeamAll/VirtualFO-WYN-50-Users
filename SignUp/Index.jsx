@@ -1,5 +1,12 @@
 // src/LandingPage.jsx
 export default function LandingPage() {
+  // Video lives in /public/hero-demo.mp4
+  const DEMO_VIDEO_URL = "./hero-demo.mp4";
+
+  // Optional poster while loading
+  const DEMO_POSTER_URL =
+    "https://tknzgegeniiojzsascfl.supabase.co/storage/v1/object/public/pictures/Icon2.png";
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -24,6 +31,29 @@ export default function LandingPage() {
               alt="G-win Penguin Mascot"
               className="w-full h-auto"
             />
+          </div>
+
+          {/* NEW: Demo video slot */}
+          <div className="w-full max-w-[335px]">
+            <div className="rounded-2xl overflow-hidden bg-black/20 ring-1 ring-white/25 shadow-sm">
+              <div className="relative w-full aspect-video bg-black">
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src={DEMO_VIDEO_URL}
+                  poster={DEMO_POSTER_URL}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  controls
+                />
+              </div>
+            </div>
+
+            <p className="mt-3 text-white/90 text-center text-[11px] leading-normal font-medium">
+              Watch a quick preview of the learning experience.
+            </p>
           </div>
 
           {/* Hero Content */}
