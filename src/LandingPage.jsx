@@ -1,242 +1,140 @@
 // src/LandingPage.jsx
 export default function LandingPage() {
-  // Video lives in /public/hero-demo.mp4 (Vite public assets)
-  const DEMO_VIDEO_URL = "/hero-demo.mp4";
+  const SIGNUP_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?usp=sharing&ouid=108340782551691965931";
 
-  // Optional poster while loading
-  const DEMO_POSTER_URL =
-    "https://tknzgegeniiojzsascfl.supabase.co/storage/v1/object/public/pictures/Icon2.png";
+  const SIGNUP_FORM_EMBED_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?embedded=true";
 
-  const PILOT_FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLSckNkcOSUVfVMkefZP8bq7DfhXGF-MXRRr4nt-gg7Em6HWCZw/viewform?usp=dialog";
+  const LOGO_URL = "https://www.gwin.co.za/assets/logo-header.svg";
+  const PENGUIN_URL = "https://www.gwin.co.za/assets/gwin-penguin-standing.svg";
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="px-4 py-12 md:py-16 lg:py-20 bg-brand-orange">
-        <div className="max-w-md mx-auto flex flex-col items-center gap-8">
-          {/* Logo */}
-          <div className="flex items-center justify-center px-5 pt-2 pb-2">
+    <div className="min-h-[100svh] overflow-x-hidden bg-white text-[#14110f]">
+      <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 w-full max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-5 md:h-20">
+          <a
+            href="https://www.gwin.co.za/"
+            aria-label="Gwin home"
+            className="inline-flex min-w-0 items-center"
+          >
             <img
-              src="https://tknzgegeniiojzsascfl.supabase.co/storage/v1/object/public/pictures/Icon2.png"
-              alt="Start logo"
-              className="h-[60px] w-auto object-contain drop-shadow-sm select-none"
+              src={LOGO_URL}
+              alt="Gwin logo"
+              className="h-auto w-28 sm:w-32 md:w-40"
               loading="eager"
               decoding="async"
-              draggable="false"
             />
-          </div>
+          </a>
 
-          {/* Penguin Mascot */}
-          <div className="w-full max-w-[335px]">
+          <a
+            href={SIGNUP_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#f79256] px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_-12px_rgba(247,146,86,.95)] transition hover:bg-[#ef7f3d] sm:px-5"
+          >
+            Open form
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative isolate overflow-hidden bg-[#f4f3f1] px-4 py-10 sm:px-5 sm:py-14 md:py-20">
+          <div className="pointer-events-none absolute -left-36 top-8 hidden w-[clamp(320px,34vw,460px)] rotate-[58deg] opacity-90 md:block">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/444dd036eb3d2814d09e3428e63ff0852bea1c44?width=670"
-              alt="G-win Penguin Mascot"
-              className="w-full h-auto"
+              src={PENGUIN_URL}
+              alt=""
+              aria-hidden="true"
+              className="h-auto w-full"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
-          {/* Hero Content */}
-          <div className="w-full max-w-[335px] flex flex-col items-center gap-6">
-            <div className="flex flex-col gap-11">
-              <h1 className="text-white text-center text-[28px] leading-[100%] font-bold">
-                Master your money.
-                <br />
-                G-win at business.
-                <br />
-                It&apos;s free, it&apos;s fun.
-              </h1>
+          <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
+            <p className="text-[0.68rem] font-extrabold uppercase tracking-[.18em] text-[#14110f]/70 sm:text-xs">
+              Gwin sign-up
+            </p>
 
-              <p className="text-white text-center text-[13px] leading-[125%] font-normal">
-                Join the exclusive pilot of the game-changing business finance
-                learning app made for South African entrepreneurs who want to
-                grow with confidence.
-                <br />
-                <br />
-                There are only 50 spots available.
-                <br />
-                Top 5 finishers get rewards.
+            <h1 className="mx-auto mt-4 max-w-3xl text-[clamp(2rem,11vw,4.2rem)] font-extrabold leading-[1.05] tracking-[-.055em]">
+              Join the Gwin sign-up list.
+            </h1>
+
+            <p className="mx-auto mt-5 max-w-2xl text-[0.98rem] leading-7 text-[#14110f]/75 sm:text-base md:mt-6 md:text-lg md:leading-8">
+              You’re almost there. Add your details below and we’ll use this list to share access and launch updates.
+            </p>
+
+            <p className="mx-auto mt-4 max-w-xl text-sm font-bold leading-6 text-[#f79256]">
+              Sign-ups are open and are not limited to 50 users.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-8 sm:px-5 sm:py-10 md:py-14 lg:py-16">
+          <div className="mx-auto grid w-full max-w-6xl gap-6 sm:gap-8 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
+            <aside className="order-2 rounded-[1.75rem] border border-[#14110f]/10 bg-[#f4f3f1] p-5 sm:p-6 md:rounded-[2rem] md:p-8 lg:sticky lg:top-28 lg:order-1">
+              <p className="text-[0.68rem] font-extrabold uppercase tracking-[.18em] text-[#14110f]/70 sm:text-xs">
+                Next step
               </p>
-            </div>
 
-            {/* Join Pilot CTA -> Google Form */}
+              <h2 className="mt-4 text-[clamp(1.55rem,7vw,2.4rem)] font-extrabold leading-tight tracking-[-.04em]">
+                Complete the short form.
+              </h2>
+
+              <p className="mt-4 text-sm leading-7 text-[#14110f]/70 sm:mt-5">
+                This page is only for capturing sign-ups, so we’ve kept it simple and removed the repeated landing-page information.
+              </p>
+
+              <div className="mt-6 grid gap-3 text-sm leading-6 text-[#14110f]/75 sm:mt-7">
+                <div className="rounded-2xl bg-white p-4">
+                  <strong className="block text-[#14110f]">1. Fill in your details</strong>
+                  <span>The form is connected to the Gwin sign-up list.</span>
+                </div>
+
+                <div className="rounded-2xl bg-white p-4">
+                  <strong className="block text-[#14110f]">2. Submit the form</strong>
+                  <span>We’ll use the list for access and launch updates.</span>
+                </div>
+              </div>
+
+              <a
+                href={SIGNUP_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#f79256] px-5 py-3.5 text-center text-sm font-bold text-white shadow-[0_16px_40px_-20px_rgba(247,146,86,1)] transition hover:bg-[#ef7f3d] sm:mt-7 sm:px-6 sm:text-base"
+              >
+                Open form in new tab
+              </a>
+            </aside>
+
+            <div className="order-1 overflow-hidden rounded-[1.75rem] border border-[#14110f]/10 bg-white shadow-[0_28px_80px_-55px_rgba(20,17,15,.65)] md:rounded-[2rem] lg:order-2">
+              <iframe
+                src={SIGNUP_FORM_EMBED_URL}
+                title="Gwin sign-up form"
+                className="block h-[76svh] min-h-[620px] w-full border-0 sm:min-h-[720px] md:min-h-[820px] lg:h-[900px] lg:min-h-0"
+                loading="lazy"
+              >
+                Loading…
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#14110f] px-4 py-8 text-center text-white sm:px-5">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-sm leading-6 text-white/70">
+              Already know what Gwin does? Complete the form above, or go back to the full landing page.
+            </p>
+
             <a
-              href={PILOT_FORM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white rounded-[25px] px-4 py-2.5 min-w-[153px] inline-flex items-center justify-center"
+              href="https://www.gwin.co.za/"
+              className="mt-4 inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
             >
-              <span className="text-black text-center text-[15px] leading-[125%] font-normal">
-                Join the pilot
-              </span>
+              Back to Gwin
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Feature Section 1: Bite sized lessons */}
-      <section className="bg-white px-4 py-12">
-        <div className="max-w-md mx-auto flex flex-col items-center gap-6">
-          <h2 className="text-black text-center text-[14px] font-semibold leading-normal">
-            Bite sized lessons, Serious Gains
-          </h2>
-
-          <div className="w-24 h-24">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/e7ed016b35f1c708a855d25968f39b5c327f179a?width=194"
-              alt="Trophy"
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          <p className="text-black text-center text-[11px] font-medium leading-normal max-w-[300px]">
-            With quick, bite sized lessons, you&apos;ll earn points and rewards while
-            mastering the game of business finance — making your money grow and
-            your business succeed.
-          </p>
-        </div>
-      </section>
-
-      {/* Feature Section 2: Built for Real Hustlers */}
-      <section className="bg-white px-4 py-12">
-        <div className="max-w-md mx-auto flex flex-col items-center gap-6">
-          <h2 className="text-black text-center text-[14px] font-semibold leading-normal">
-            Built for Real Hustlers
-          </h2>
-
-          <div className="w-28 h-24">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/fb3f6ed94e11da0382653b348532d94d12de1728?width=214"
-              alt="Trophy"
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          <p className="text-black text-center text-[11px] font-medium leading-normal max-w-[300px]">
-            Content designed for real South African businesses - existing
-            businesses, startups, freelancers, side hustles and more.
-          </p>
-        </div>
-      </section>
-
-      {/* Feature Section 3: Rewards for Taking Action */}
-      <section className="bg-white px-4 py-12">
-        <div className="max-w-md mx-auto flex flex-col items-center gap-6">
-          <h2 className="text-black text-center text-[14px] font-semibold leading-normal">
-            Rewards for Taking Action
-          </h2>
-
-          <div className="w-28 h-24">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/4bca52a19d4df09302bf949bdc66136d2d1d046a?width=212"
-              alt="Trophy"
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          <p className="text-black text-center text-[11px] font-medium leading-normal max-w-[300px]">
-            The top 5 users who complete all lessons will receive Takealot
-            vouchers as a thank-you for your time and effort.
-          </p>
-
-          {/* Demo video moved here (Portrait / phone ratio) */}
-          <div className="w-full flex flex-col items-center pt-2">
-            <div className="w-full max-w-[260px] aspect-[9/16] overflow-hidden rounded-2xl bg-black ring-1 ring-black/10 shadow-sm">
-              <video
-                className="w-full h-full object-contain"
-                src={DEMO_VIDEO_URL}
-                poster={DEMO_POSTER_URL}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                controls
-              />
-            </div>
-
-            <p className="mt-3 text-black/80 text-center text-[11px] leading-normal font-medium">
-              Watch a quick preview of the learning experience.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How it works Section */}
-      <section className="px-4 py-12 md:py-16 bg-brand-orange">
-        <div className="max-w-md mx-auto">
-          <h1 className="text-white text-center text-2xl font-semibold leading-normal mb-12">
-            How it works
-          </h1>
-
-          <div className="flex flex-col gap-12">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
-                1.Apply for the Pilot
-              </h2>
-              <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
-                Fill in the short form. We&apos;re selecting 50 serious entrepreneurs.
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
-                2.Receive your exclusive invitation
-              </h2>
-              <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
-                If you&apos;re selected, we&apos;ll send you the app link and add you to
-                the WhatsApp pilot group.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
-                3.Learn in 5 minutes a day
-              </h2>
-              <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
-                Complete 1 short lesson per day. We&apos;ll send daily reminders and
-                keep you on track.
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-white text-center text-[14px] font-semibold leading-normal">
-                4.Finish and win
-              </h2>
-              <p className="text-white text-center text-[11px] font-medium leading-normal max-w-[300px]">
-                Complete all lessons and stand a chance to win rewards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Is this for you? Section */}
-      <section className="bg-white px-4 py-12 md:py-16">
-        <div className="max-w-md mx-auto">
-          <h2 className="text-black text-center text-2xl font-semibold leading-normal mb-8">
-            Is this for you?
-          </h2>
-
-          <div className="max-w-[300px] mx-auto">
-            <p className="text-black text-[11px] font-medium leading-normal tracking-[0.11px]">
-              This pilot is for you if:
-            </p>
-            <br />
-            <ul className="text-black text-[11px] font-medium leading-normal tracking-[0.11px] list-disc pl-4 space-y-1">
-              <li>You&apos;re aged 18–45 in South Africa</li>
-              <li>You have a business or want to start one</li>
-              <li>You want to master business finances</li>
-              <li>You can commit to 5 minutes a day in building your future</li>
-              <li>You&apos;re open to giving honest feedback to help us improve the app</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }
